@@ -1,4 +1,4 @@
-﻿namespace PrimaryConstractorDemo;
+﻿namespace PrimaryConstructorDemo;
 
 public class SavingsAccount: BankAccount
 {
@@ -10,11 +10,21 @@ public class SavingsAccount: BankAccount
 
     public void Deposit()
     {
-        if (_depositedAmount >= 1000)
+        try
         {
-            throw new Exception("Deposit is not allowed more than 1000");
+            if (_depositedAmount >= 1000)
+            {
+                throw new Exception("Deposit is not allowed more than 1000");
+            }
+
+            Console.WriteLine(
+                $"{OwnerName} is successfully deposited {_depositedAmount}. Account Number: {AccountNumber}");
         }
-        Console.WriteLine($"{OwnerName} is successfully deposited {_depositedAmount}. Account Number: {AccountNumber}");
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw new Exception($"Error occurred in Deposit. Error: {e}");
+        }
     }
 }
 

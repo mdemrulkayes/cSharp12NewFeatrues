@@ -1,4 +1,4 @@
-﻿namespace PrimaryConstractorDemo;
+﻿namespace PrimaryConstructorDemo;
 
 public class BankAccount(string accountNumber, string ownerName)
 {

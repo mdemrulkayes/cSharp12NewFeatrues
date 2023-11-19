@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrimaryConstractor", "PrimaryConstractor", "{50633E5A-2936-451C-B7C5-55D7AB32D0EB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrimaryConstructor", "PrimaryConstructor", "{50633E5A-2936-451C-B7C5-55D7AB32D0EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimaryConstractorDemo", "PrimaryConstractorDemo\PrimaryConstractorDemo.csproj", "{E1A6B480-D3F9-4CFA-84A8-3AF78804A48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimaryConstructorDemo", "PrimaryConstractorDemo\PrimaryConstructorDemo.csproj", "{E1A6B480-D3F9-4CFA-84A8-3AF78804A48B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
