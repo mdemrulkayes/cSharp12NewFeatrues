@@ -5,19 +5,12 @@ namespace PrimaryConstructorApiDemo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController(IWeatherService weatherService) : ControllerBase
+public class WeatherForecastController(ILogger logger, IWeatherService weatherService) : ControllerBase
 {
-    private readonly ILogger<WeatherForecastController> _logger = null!;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherService weatherService) : this(weatherService)
-    {
-        _logger = logger;
-    }
-
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-        _logger.LogInformation("Inside get weather method");
+        logger.LogInformation("Inside get weather method");
         return Enumerable.Range(1, 5).Select(weatherService.GetWeatherForecast)
             .ToArray();
     }
